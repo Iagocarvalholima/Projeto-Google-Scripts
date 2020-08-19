@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Acordo Day</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <style>
+      nav {
+      background-color:#993399;
+      }
+     #geral,#screen{
+      background-color:#993399;
+      margin-top: 80px;
+      border-radius:30px;
+      height:100px;
+      }
+      #consultar{
+      margin-top:5px;
+      
+      }
+      #roxo1,#roxo2,#roxo3{
+       color: #993399 !important;    
+}
+      #sec2{background: #ffffff;
+        border-radius: 20px;
+        padding: 15px;
+        width: 50%;
+        margin:auto;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+        margin-top: 5%;
+        display: none;
+        }
+       
+     #sec1{
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 15px;
+        width: 70%;
+        margin:auto;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+        margin-top: 5%;
+        display:block;
+      }
+      .btn-login{
+      background:#993399!important;
+      }
+      
+     #screen,#menu,#live,#geral,#result,#medico, #btnGeral, #add, #rem, #alt{
+     display: none;
+     }
+     .ball{
+     height: 120px;
+     width: 110px;
+     background-color: purple;
+     border-radius: 10px; 
+     margin-left: 45%;
+     margin-top: 15px;
+     box-shadow: 0 -15px 15px  #4527a0  inset;
+     
+     }
+     
+     
+     #valor{
+     padding-top: 20px;
+     color: #FFF;
+     text-align: center;
+     }
+     #newtab{
+      background-color:#993399;
+      margin-top: 15px;
+      margin: auto;
+      border-radius:30px;
+      display: none;
+     
+     
+}
+    #tabela{
+    font-family: bangers;
+    font-size: 20px;
+    color: #FFF;
+    
+    }
+    
+    #tabelaRes{
+    font-family: bangers;
+    font-size: 40px;
+    color: #FFF;
+    text-align: center;
+    
+    }
+    
+    #medico{
+    margin-top: 5%;
+    text-align: center ;
+    
+  
+    
+}
+#foto{
+margin-top: 5%;
+margin-right: 5px;
+
+
+}
+     
+      
+      </style>
+  </head>
+  <body id= "Corpo">
+   
+  <nav background-color="#0097a7">
+    <div id="menu"class="nav-wrapper">
+      <a href="#!" class="brand-logo center"><img src="https://lh3.googleusercontent.com/-dp8wNOEovhs/XyTU4F8UP8I/AAAAAAAADmc/pWCUPV5LVGElLprwNMMtewOtD2wWK2b8gCK8BGAsYHg/s0/2020-07-31.png" alt="Magazine Luiza" style="margin-top:1%" height="75" width="70"> </a>
+      <ul class="left hide-on-med-and-down">
+        <li id="inicio"><a target="_top">Início</a></li>
+        <li id="ind"><a target="_top">Diario</a></li>
+        <li id="ger"><a target="_top">Geral</a></li>
+         </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        
+              <img id="foto" src="" alt="" class="circle responsive-img" width= "50" height="50"> <!-- notice the "circle" class -->
+              <li>
+              
+              <a id="ola" value="foi"href="https://script.google.com/a/magazineluiza.com.br/macros/s/AKfycbz4MLii1mNF7WNldqanGhpeeIIa-ZFAR9uX8mYwRJc/exec" target="_top">Login</a></li>
+            </ul>
+    </div>
+  </nav>
+  
+  
+  <section id="sec1">
+  <h4 align="center"><strong style="color:#993399">LOGIN</strong></h4>
+      <div class="row">
+       <div class="input-field col s6 offset-s3">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+          </div>
+          </div>
+          <div class="row">
+        <div class="input-field col s6 offset-s3">
+          <input id="senha" type="password" class ="validate">
+          <label for="password">Password</label>
+          </div>
+          </div>
+          <div class="row">
+          <button id="btnlogin" class="btn waves-effect waves-light purple col s3 offset-s4  " type="submit" name="action">ENTRAR
+    <i class="material-icons right">send</i>
+     </button>  
+        </div>
+  </section>
+  
+  
+  <div id="geral" class="container">
+  <br>
+  <h5 style="color:#FFFFFF" align="center"><strong>Geral</strong></h5>
+  </div>
+  <div id="screen" class="container">
+  <br>
+  <h5 style="color:#FFFFFF" align="center"><strong>Bem Vindo ao Acordo Day Colaborador!</strong></h5>
+  </div>
+  
+  
+  
+<div id="btnGeral" class="fixed-action-btn">
+  <a class="btn-floating btn-large purple">
+    <i class="large material-icons">dehaze</i>
+  </a>
+  <ul>
+    <li ><a id="add" title="Adicionar Colaborador" class="btn-floating purple darken-1 btn modal-trigger" href="#modal1" ><i class="material-icons">person_add</i></a></li>
+    <li ><a id="rem" title="Remover Colaborador" class="btn-floating purple darken-2 btn modal-trigger" href="#modal1"><i class="material-icons">delete_forever</i></a></li>
+    <li ><a id="alt" title="Alterar Senha" class="btn-floating purple darken-3 btn modal-trigger" href="#modal1"><i class="material-icons">create</i></a></li>
+   </ul>
+      
+  </div>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+  
+      <div id="modalAdd" >
+      <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Nome" id="addNome" type="text" class="validate">
+          <label for="first_name">Nome </label>
+          </div>
+        </div>
+        <div class="row">
+        <div class="input-field col s6">
+          <input id="addSenha" type="password" class="validate">
+          <label for="password">Senha</label>
+        </div>
+        </div>
+        <div class="row">
+        <div class="input-field col s6">
+          <input id="addEmail" type="email" class="validate">
+          <label for="last_name">E-mail</label>
+          </div>
+      </div>
+        </form>
+        <a  id="btnAdd" class="waves-effect waves-light btn  purple col s3 offset-s1"><i class="material-icons right">person_add</i>Adicionar</a>
+        </div>
+    
+      <div id="modalRem" class="row">
+  
+ <select class="browser-default col s5 " id="percorre" >
+  <option value="" disabled selected>Selecione o colaborador</option>
+    <? for (var i=0; i<listFunc.length; i++){ ?>
+   <option><?= listFunc[i];?></option>
+    <? } ?> 
+  </select>
+
+  <a  id="btnRem" class="waves-effect waves-light btn  purple col s3 offset-s1"><i class="material-icons right">clear</i>Remover</a>
+
+      </div>
+      
+      <div id="modalAlt">
+      <h2 style="color:#993399">Alterar Senha</h2>
+      <div class="row">
+    <form class="col s12">
+    <div class="row">
+        <div class="input-field col s6">
+          <i id="roxo1" class="material-icons prefix ">phonelink_lock</i>
+          <input id="passA" type="password" class="validate">
+          <label for="icon_prefix">Confirmar Senha Antiga</label>
+        </div>
+        </div>
+        <div class="row">
+        <div class="input-field col s6">
+          <i id="roxo2" class="material-icons prefix ">fiber_new</i>
+          <input id="passB" type="password" class="validate">
+          <label for="icon_telephone">Nova Senha</label>
+        </div>
+        </div>
+        <div class="row">
+        <div class="input-field col s6">
+          <i id="roxo3" class="material-icons prefix ">fiber_new</i>
+          <input id="passC" type="password" class="validate">
+          <label for="icon_telephone">Confirmar Nova Senha</label>
+        </div>   
+        </div>
+   
+       <a  id="btnAlt" class="waves-effect waves-light btn  purple col s6 offset-s3"><i class="material-icons right">sync</i>Alterar</a>
+    </form>
+  </div>
+      </div>
+      
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">FECHAR</a>
+    </div>
+  </div>
+  <div id="medico" >
+  <h4> Vencedora de PJ</h4>
+  <span href="#!" ><img  src="" alt="Magazine Luiza" style="margin-top:1%"  height="500" width="300" > </span>
+  <h4> Vencedor de PF Manhã</h4>
+  <span href="#!" ><img  src="" alt="Magazine Luiza" style="margin-top:1%"  height="500" width="300" > </span>
+   <h4> Vencedor de PF Tarde</h4>
+  <span href="#!" ><img  src="" alt="Magazine Luiza" style="margin-top:1%"  height="500" width="300" > </span>
+  </div>
+  <div id="medico" class="container">
+  <span href="#!" ><img  src="https://lh3.googleusercontent.com/-1FRQKbguUMA/XysNxcfBhNI/AAAAAAAADqs/WV5P2CJzc9EYB0eYj4uVlDiB4bXwoAJLgCK8BGAsYHg/s0/2020-08-05.png" alt="Magazine Luiza" style="margin-top:1%"  height="500" width="300" > </span>
+  </div>
+  
+  <br>
+  <section id="newtab" class="container" align="center">
+  <table id="tabelaRes" class=" container centered table " >
+  
+  </table>
+  <br><br>
+  <table id="tabela" class="container " align="center">
+  
+  </table>
+  
+  </section>
+
+  <br> <br> <br>
+ 
+ <div id="sec2" class="container">
+<div id="live" class="row">
+ <select class="browser-default col s5 " id="select" >
+  <option value="" disabled selected>Selecione o colaborador</option>
+    <? for (var i=0; i<list.length; i++){ ?>
+   <option><?= list[i];?></option>
+    <? } ?> 
+  </select>
+
+  <a  id="consultar" class="waves-effect waves-light btn  purple col s3 offset-s1"><i class="material-icons right">view_headline
+</i>Consultar</a>
+</div>
+  </div>
+<section id="result" class="ball">
+      <h1 id="valor"></h1>
+ <section>
+
+     
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+       <script type = "text/javascript">
+       document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.fixed-action-btn');
+    let instances = M.FloatingActionButton.init(elems, {
+      direction: 'left'
+    })
+  });
+  
+  document.getElementById("btnlogin").addEventListener("click", Login);
+  var global = "";
+  function Login(){
+  let email = document.getElementById("email").value;
+  let senha = document.getElementById("senha").value;
+
+  
+  if(email == "" || senha == ""){
+  
+   M.toast({html: 'Dados não foram preenchidos!',classes: 'rounded red'})
+  
+   }else{
+   
+   google.script.run.withSuccessHandler(validator).login(email,senha);
+  
+   }
+  }
+  
+  function validator(entrar){
+ 
+  
+  if(entrar[0] == 'Login correto!'){
+ 
+    M.toast({html: 'Login correto',classes: 'rounded purple'})
+    document.getElementById("sec1").style.display = "none";
+    document.getElementById("sec2").style.display = "none";
+    document.getElementById("screen").style.display = "block";
+    document.getElementById("medico").style.display = "block"; 
+    document.getElementById("btnGeral").style.display = "block";
+    document.getElementById("alt").style.display = "block";
+      document.getElementById("tabelaRes").style.display = "none";
+ 
+     document.getElementById("menu").style.display = "block"; 
+     document.getElementById("geral").style.display = "none";
+   
+     let ola = document.getElementById('ola');
+     
+      document.getElementById("foto").src = entrar[2];
+  
+  ola.innerText = ""
+  ola.innerText = "Olá, " + entrar[1]
+  ola.title = "Sair"
+  ola.setAttribute('value', entrar[1]);
+  
+  global = entrar[1];
+  
+  if(entrar[1] == "Iago" || entrar[1] == "Monique"){
+  
+  document.getElementById("add").style.display = "block";
+  document.getElementById("rem").style.display = "block";
+  }
+  
+  }else {
+  
+   M.toast({html: 'Login incorreto',classes: 'rounded red'})
+   
+  }
+  
+  
+  }
+  document.getElementById("ind").addEventListener("click", Individual);
+  
+  function Individual(){
+    document.getElementById("tabelaRes").style.display = "none";
+  document.getElementById("sec1").style.display = "none";
+  document.getElementById("medico").style.display = "none";
+  document.getElementById("sec2").style.display = "block";
+  document.getElementById("screen").style.display = "none";
+  document.getElementById("geral").style.display = "none";
+   document.getElementById("newtab").style.display = "none";
+  document.getElementById("result").style.display = "none";
+  document.getElementById("live").style.display = "block";
+  document.getElementById("ind").classList.add("active")
+  document.getElementById("ger").classList.remove("active")
+  document.getElementById("inicio").classList.remove("active")
+
+  
+  
+  }
+  document.getElementById("ger").addEventListener("click", Geral);
+  
+  function Geral(){
+    document.getElementById("tabelaRes").style.display = "block";
+  document.getElementById("sec1").style.display = "none";
+  document.getElementById("sec2").style.display = "none";
+  document.getElementById("screen").style.display = "none";
+  document.getElementById("medico").style.display = "none";
+  document.getElementById("live").style.display = "none";
+  document.getElementById("newtab").style.display = "block";
+  document.getElementById("result").style.display = "none";
+  document.getElementById("geral").style.display = "block";
+  document.getElementById("ger").classList.add("active")
+  document.getElementById("ind").classList.remove("active")
+  document.getElementById("inicio").classList.remove("active")
+  
+  google.script.run.withSuccessHandler(tabela).geral();
+   google.script.run.withSuccessHandler(tabela).resultado();
+  
+  
+  }
+  document.getElementById("inicio").addEventListener("click", Inicio);
+  
+  function Inicio(){
+  document.getElementById("sec1").style.display = "none";
+  document.getElementById("sec2").style.display = "none";
+  document.getElementById("screen").style.display = "block";
+  document.getElementById("live").style.display = "none";
+  document.getElementById("geral").style.display = "none";
+  document.getElementById("result").style.display = "none";
+  document.getElementById("inicio").classList.add("active")
+  document.getElementById("ind").classList.remove("active")
+  document.getElementById("ger").classList.remove("active")
+  document.getElementById("newtab").style.display = "none";
+  document.getElementById("medico").style.display = "block";
+  document.getElementById("tabelaRes").style.display = "none";
+  
+  
+  }
+  document.getElementById("consultar").addEventListener("click", Consultar);
+  function Consultar(){
+  
+  let nomes = document.getElementById("select");
+  let colab = nomes.options[nomes.selectedIndex].value;
+  
+  let pos = nomes.selectedIndex ;
+  
+  google.script.run.withSuccessHandler(mostrar).diario(pos);
+  
+  }
+ 
+  function mostrar(res){
+  document.getElementById("result").style.display = "block";
+  document.getElementById("valor").innerHTML = res;
+
+  }
+  
+     //tabela geral.
+  function tabela (info){
+console.log(info)
+  const table = document.getElementById(info[1]);
+  table.innerHTML = ""
+  
+  info[0].forEach((elemento,i) => {
+ if(i == 0){
+  elemento.forEach((el, j) => {
+  let row = table.insertRow(j)
+  let cell = row.insertCell(i)
+  cell.innerHTML = el ;
+  })
+  }else{
+     
+   elemento.forEach((el, j) => {
+  let row = table.rows[j]
+  let cell = row.insertCell(i)
+  cell.innerHTML = el ;
+  })
+
+}
+})
+  }
+  //Modal 
+  document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.modal');
+    let instances = M.Modal.init(elems);
+  });
+  //botão adicionar.
+  document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.fixed-action-btn');
+    let instances = M.FloatingActionButton.init(elems);
+  });
+  
+  document.getElementById("add").addEventListener("click", styleAdicionar);
+  
+  function styleAdicionar(){
+   document.getElementById("modalRem").style.display = "none";
+   document.getElementById("modalAlt").style.display = "none";
+   document.getElementById("modalAdd").style.display = "block";
+    
+  }
+  document.getElementById("btnAdd").addEventListener("click", Adicionar);
+  function Adicionar(){
+  let nome = document.getElementById("addNome").value;
+  let senha = document.getElementById("addSenha").value;
+  let email = document.getElementById("addEmail").value;
+  
+  if(nome == "" || senha =="" || email == "") {
+  
+ M.toast({html: 'Dados não foram preenchidos!',classes: 'rounded red'})
+ 
+  }else{
+   
+   google.script.run.withSuccessHandler(AddOn).nse(nome,senha,email);
+  
+  } 
+}
+function AddOn(retorno){
+
+M.toast({html: 'Colaborador inserido com sucesso!! :) ',classes: 'rounded purple'})
+
+}
+  
+  document.getElementById("rem").addEventListener("click", styleRemover);
+  
+  function styleRemover(){
+   document.getElementById("modalAdd").style.display = "none";
+   document.getElementById("modalAlt").style.display = "none";
+   document.getElementById("modalRem").style.display = "block";
+  }
+  
+  document.getElementById("btnRem").addEventListener("click", Remover);
+  
+  function Remover(){
+  var colab = document.getElementById("percorre")
+  
+ let cob = document.getElementById("percorre").value;
+ console.log(cob);
+ if(cob == ""){
+
+ M.toast({html:"Selecione o colaborador!"})
+}else{
+
+let confirm = window.confirm("Você tem certeza que deseja excluir o atendente: " + cob +"?")
+if (confirm ){
+       google.script.run.withSuccessHandler(DelOn).remove(cob)
+       } else {
+       
+       M.toast({html:"Exclusão cancelada."})}
+  }
+  };
+  
+  function DelOn(deletado){
+  
+  M.toast({html: 'Colaborador Removido!! ;-; ',classes: 'rounded purple'})
+  
+  
+}
+
+document.getElementById("btnAlt").addEventListener("click", Alterar);
+
+  function Alterar (){
+   let senhaAntiga = document.getElementById("passA").value;
+   let senhaTroca = document.getElementById("passB").value;
+   let senhaConfirma = document.getElementById("passC").value;
+console.log(global);
+console.log(global);
+   if(senhaTroca == senhaConfirma ){
+   if(senhaTroca == "" || senhaConfirma == ""){
+   M.toast({html: 'Dados não foram preenchidos',classes: 'rounded purple'})
+   
+  }else{
+    google.script.run.withSuccessHandler(AltSenha).alterarSenha(senhaAntiga,senhaTroca,global);
+  } 
+}
+
+else{
+ M.toast({html: 'Senha Nova incorreta!!',classes: 'rounded purple'})
+
+}
+ 
+
+}
+function AltSenha(correto){
+
+if(correto == "OK"){
+ M.toast({html: 'Senha alterada com sucesso!!',classes: 'rounded purple'})
+ }
+ 
+ else{
+ 
+  M.toast({html: 'Senha Atual Incorreta !!',classes: 'rounded purple'})
+ }
+ 
+ }
+  document.getElementById("alt").addEventListener("click", styleAlterar);
+  
+  function styleAlterar(){
+    document.getElementById("modalAdd").style.display = "none";
+    document.getElementById("modalRem").style.display = "none";
+    document.getElementById("modalAlt").style.display = "block";
+  }
+       </script>
+  </body>
+ 
+</html>
